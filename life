@@ -1,0 +1,44 @@
+
+#include "TXLib.h"
+string intToStr(int x)  //x=1
+{
+    string s="";
+    if (x==0) s="0"+s;
+    if (x==1) s="1"+s;
+    if (x==2) s="2"+s;
+    if (x==3) s="3"+s;
+    if (x==4) s="4"+s;
+    if (x==5) s="5"+s;
+    if (x==6) s="6"+s;
+    if (x==7) s="7"+s;
+    if (x==8) s="8"+s;
+    if (x==9) s="9"+s;
+    return s;
+
+
+}
+
+int main()
+    {
+        int hp=100;
+        string hpS="HP 100";
+    txCreateWindow (800, 600);
+
+
+   while(1)
+   {
+       txSetFillColour(TX_BLUE);
+     txRectangle(10,10,110,50);
+     hpS="HP "+intToStr(hp);
+   txDrawText(10,10,110,50,hpS.c_str());
+
+   if (txMouseButtons()==2)
+   {
+       hp=hp-5;
+   }
+   txSleep(100);
+   txSetFillColour(TX_BLACK);
+   txClear();
+ }
+    return 0;
+    }
