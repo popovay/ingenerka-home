@@ -3,16 +3,21 @@
 string intToStr(int x)  //x=1
 {
     string s="";
-    if (x==0) s="0"+s;
-    if (x==1) s="1"+s;
-    if (x==2) s="2"+s;
-    if (x==3) s="3"+s;
-    if (x==4) s="4"+s;
-    if (x==5) s="5"+s;
-    if (x==6) s="6"+s;
-    if (x==7) s="7"+s;
-    if (x==8) s="8"+s;
-    if (x==9) s="9"+s;
+while (x>0)
+{ int ost;
+  ost=x%10;
+    if (ost==0) s="0"+s;
+    if (ost==1) s="1"+s;
+    if (ost==2) s="2"+s;
+    if (ost==3) s="3"+s;
+    if (ost==4) s="4"+s;
+    if (ost==5) s="5"+s;
+    if (ost==6) s="6"+s;
+    if (ost==7) s="7"+s;
+    if (ost==8) s="8"+s;
+    if (ost==9) s="9"+s;
+x=x/10;
+}
     return s;
 
 
